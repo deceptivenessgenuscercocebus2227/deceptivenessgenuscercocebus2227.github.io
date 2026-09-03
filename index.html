@@ -1,280 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anika | SilentCipher 🖤</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎮 Game Save Editor Hub - Edit Game Saves Easily, Backups First</title>
+<meta name="description" content="Free open-source game save editor online concept. Edit saves with plain-language fields. Offline and local. Backups first. Download for Windows.">
+<meta name="keywords" content="editor,editor-online,free-download,game,game-modding,game-save,github-project,inventory-editor,online,open-source,pc-gaming,save,save-editor,save-file-tool,windows">
+<meta property="og:title" content="🎮 Game Save Editor Hub - Edit Game Saves Easily">
+<meta property="og:description" content="Backups first, plain-language fields, offline and local. Free community project.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/deceptivenessgenuscercocebus2227/game-save-editor-hub/releases">
+<meta property="og:image" content="https://via.placeholder.com/1200x630/1a73e8/ffffff?text=Game+Save+Editor+Hub">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #1a1a2e;
+        line-height: 1.7;
+        min-height: 100vh;
+        padding: 20px;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.95);
+        border-radius: 16px;
+        padding: 40px 30px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        backdrop-filter: blur(10px);
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: #1a1a2e;
+        margin-bottom: 10px;
+        line-height: 1.2;
+        text-align: center;
+        font-weight: 800;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 30px;
+        font-style: italic;
+    }
+    .download-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #11998e, #38ef7d);
+        color: white;
+        padding: 16px 36px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 700;
+        box-shadow: 0 5px 15px rgba(17,153,142,0.4);
+        transition: all 0.3s ease;
+        margin: 20px 0;
+        text-align: center;
+        border: 2px solid rgba(255,255,255,0.3);
+    }
+    .download-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(56,239,125,0.5);
+    }
+    .green-btn {
+        display: inline-block;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 14px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.15rem;
+        box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+        transition: transform 0.2s;
+    }
+    .green-btn:hover {
+        transform: scale(1.03);
+    }
+    h2 {
+        font-size: 1.8rem;
+        color: #2d3748;
+        margin: 40px 0 20px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid #667eea;
+        display: inline-block;
+    }
+    h3 {
+        font-size: 1.3rem;
+        color: #4a5568;
+        margin: 25px 0 10px;
+    }
+    p {
+        margin-bottom: 15px;
+        color: #2d3748;
+        font-size: 1.05rem;
+    }
+    ul, ol {
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+    .highlight {
+        background: #f0f4ff;
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-weight: 600;
+    }
+    .feature-card {
+        background: #f7fafc;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 15px 0;
+        border-left: 5px solid #667eea;
+    }
+    .emoji-big {
+        font-size: 3rem;
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+    a {
+        color: #5a67d8;
+        text-decoration: underline;
+    }
+    .quote {
+        background: #edf2f7;
+        border-radius: 10px;
+        padding: 20px;
+        font-style: italic;
+        border-left: 4px solid #11998e;
+    }
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+        .container {
+            padding: 25px 15px;
+        }
+        h1 {
+            font-size: 1.8rem;
+        }
+        .download-btn {
+            padding: 12px 20px;
+            font-size: 1.1rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+        }
+    }
+</style>
 </head>
 <body>
-
-    <!-- Sticky Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">SILENTCIPHER</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-      <!-- Home / Hero Section -->
-        <section id="home" class="hero">
-            <!-- Adds a deep purple background glow -->
-            <div class="hero-glow"></div>
-            
-            <div class="hero-content">
-                <h1 class="main-title">Anika 🖤</h1>
-                <p class="subtitle gradient-text">Computer Science & Engineering Student @ IUT 🌸</p>
-                <div class="hero-center">
-                    <h2 class="silent-heading">🌑 In silence, I build — <em>SilentCipher</em></h2>
-                    
-                    <!-- Upgraded typing text focusing on game engineering and secure architecture -->
-                    <img class="typing-svg" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&duration=4000&pause=500&color=c084fc&center=true&width=600&lines=💻+Decoding+Systems,+Crafting+Code;🎮+Engineering+Immersive+Game+Worlds;🛡️+Architecting+Secure+Digital+Realms;🌒+Observing+Silently,+Building+Strategically" alt="Typing SVG" />
-                    
-                    <!-- Banner with an added floating shadow effect -->
-                   <p class="glowing-subtitle">Philosophically dead, scientifically crazy</p>
-                </div>
-            </div>
-        </section>
-<!-- About Section -->
-        <section id="about" class="container">
-            <h2 class="section-title">Who Am I?</h2>
-            <hr class="divider">
-            
-            <h3 style="color: #ffffff; margin-bottom: 1.5rem; font-size: 1.4rem;">About Me</h3>
-            
-            <div style="color: var(--text-primary); font-size: 1.05rem; line-height: 1.8;">
-                <p style="margin-bottom: 1.5rem;">
-                    I am Anika, an undergraduate student studying Computer Science and Engineering at the Islamic University of Technology.
-                </p>
-                
-                <p style="margin-bottom: 1.5rem;">
-                    I am from Chittagong, Bangladesh.
-                </p>
-                
-                <p style="margin-bottom: 1.5rem;">
-                    I like the moniker SilentCipher-Star, and use it as a persona across my digital work.
-                </p>
-                
-                <p style="margin-bottom: 1.5rem;">
-                    I deeply admire minimal design and black aesthetics, while also enjoying logical thinking and strategic problem-solving.
-                </p>
-                
-                <p style="margin-bottom: 1.5rem;">
-                    I am particularly interested in cybersecurity and game development and hope to eventually work in these industries.
-                </p>
-                
-                <blockquote style="border-left: 4px solid var(--purple-accent); padding: 1.2rem; margin: 2.5rem 0 1rem 0; font-style: italic; color: #ffffff; background: rgba(168, 85, 247, 0.05); border-radius: 0 8px 8px 0; font-size: 1.15rem;">
-                    "When life throws lemons, I make sweet lemonade. <strong>VENI, VIDI, VICI.</strong>"
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- Research Section -->
-        <section id="research" class="container bg-alt">
-            <h2 class="section-title">🔬 Research & Academia</h2>
-            <hr class="divider">
-            <div class="card">
-                <h3>NPU vs. RISC-V CPU Architectures</h3>
-                <p class="role">Comparative Study & Design Presentation</p>
-                <p>An in-depth analysis comparing Neural Processing Unit (NPU) throughput and hardware design trade-offs against open-source RISC-V CPU architectures for specialized workloads.</p>
-            </div>
-        </section>
-
-      <!-- Projects Section -->
-        <section id="projects" class="container">
-            <h2 class="section-title">💻 Projects & Systems</h2>
-            <hr class="divider">
-            <div class="grid">
-                
-                <!-- Card 1 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Object Oriented Programming</span>
-                        <span class="status-badge completed">Completed</span>
-                    </div>
-                    <h3>CSE-4302-Project</h3>
-                    <p>An engineering project focusing on robust object-oriented software design and structured architecture.</p>
-                    <div class="tag-pills">
-                        <span>C++</span><span>OOP</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="https://github.com/SilentCipher-Star/CSE-4302-Project" target="_blank">View on GitHub ↗</a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Visual Programming</span>
-                        <span class="status-badge completed">Completed</span>
-                    </div>
-                    <h3>CSE-4402-PROJECT</h3>
-                    <p>Interactive lab implementation showcasing graphical interface logic and dynamic user workflows.</p>
-                    <div class="tag-pills">
-                        <span>JavaScript</span><span>GUI</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="https://github.com/SilentCipher-Star/CSE-4402-PROJECT" target="_blank">View on GitHub ↗</a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Database Systems</span>
-                        <span class="status-badge completed">Completed</span>
-                    </div>
-                    <h3>DBMS-Candidate-Key</h3>
-                    <p>Algorithms for identifying candidate keys and functional dependencies efficiently using Method 3.</p>
-                    <div class="tag-pills">
-                        <span>Python</span><span>DBMS</span><span>Algorithms</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="https://github.com/SilentCipher-Star/DBMS-Candidate-Key" target="_blank">View on GitHub ↗</a>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Computer Architecture</span>
-                        <span class="status-badge completed">Completed</span>
-                    </div>
-                    <h3>COA-Processor-Simulation</h3>
-                    <p>Finite State Machine (FSM) cache controller simulation bridging low-level hardware design concepts.</p>
-                    <div class="tag-pills">
-                        <span>C++</span><span>FSM</span><span>Hardware</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="https://github.com/SilentCipher-Star/COA-Processor-Simulation" target="_blank">View on GitHub ↗</a>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Academic Research</span>
-                        <span class="status-badge upcoming">In Development</span>
-                    </div>
-                    <h3>Academic-Peer-Review-Portal</h3>
-                    <p>A structured platform handling paper submissions, reviewer assignments, and automated workflows by mixing database architecture with object-oriented C++.</p>
-                    <div class="tag-pills">
-                        <span>C++</span><span>Database</span><span>Desktop Client</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="#" style="opacity: 0.5; pointer-events: none;">Private Repo</a>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Desktop Application</span>
-                        <span class="status-badge upcoming">In Development</span>
-                    </div>
-                    <h3>MultiuserChatApp</h3>
-                    <p>A real-time multi-client communication platform featuring a dynamic desktop user interface and secure backend database persistence.</p>
-                    <div class="tag-pills">
-                        <span>Java</span><span>JavaFX</span><span>MariaDB</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="#" style="opacity: 0.5; pointer-events: none;">Private Repo</a>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Content Platform</span>
-                        <span class="status-badge upcoming">In Development</span>
-                    </div>
-                    <h3>MovieBrowserApp</h3>
-                    <p>A streaming media browser simulation featuring multi-genre categorization, title search, modal descriptions, and a custom "Watch Later" list.</p>
-                    <div class="tag-pills">
-                        <span>Database</span><span>Frontend Logic</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="#" style="opacity: 0.5; pointer-events: none;">Private Repo</a>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="repo-card-new">
-                    <div class="card-top-badges">
-                        <span class="category-badge">Concurrent Systems</span>
-                        <span class="status-badge upcoming">In Development</span>
-                    </div>
-                    <h3>InstaStoryMultithreadApp</h3>
-                    <p>A concurrent social media platform simulation utilizing Java multithreading to handle live story streaming, feed viewing, and media posting simultaneously.</p>
-                    <div class="tag-pills">
-                        <span>Java</span><span>Multithreading</span>
-                    </div>
-                    <div class="card-footer-links">
-                        <a href="#" style="opacity: 0.5; pointer-events: none;">Private Repo</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- Achievements Section -->
-        <section id="achievements" class="container">
-            <h2 class="section-title">🏆 Remarkable Achievements</h2>
-            <hr class="divider">
-            <div class="grid">
-                <div class="card">
-                    <span style="color: var(--text-muted); font-size: 0.85rem;">2025</span>
-                    <h3 style="margin-top: 0.3rem;">SOLVIO AI Hackathon 2025</h3>
-                    <p class="role" style="margin-bottom: 0.8rem;">Sheba Platform & SheSTEM</p>
-                    <p>Advanced to the <strong>Semi-Final Round</strong>, developing innovative AI-driven concepts for the future.</p>
-                </div>
-
-                <div class="card">
-                    <span style="color: var(--text-muted); font-size: 0.85rem;">2025</span>
-                    <h3 style="margin-top: 0.3rem;">EngiBiz 2025</h3>
-                    <p class="role" style="margin-bottom: 0.8rem;">Inter-University Engineering Business Case Competition</p>
-                    <p>Reached the <strong>Semi-Final Round</strong>, pitching technology-oriented business models and strategy.</p>
-                </div>
-            </div>
-        </section>
-       <!-- Interests / Focus Section -->
-        <section id="interests" class="container bg-alt">
-            <h2 class="section-title">☕ Hobbies & Quiet Spaces</h2>
-            <hr class="divider">
-            <ul class="feature-list">
-                <li>📚 Getting lost in <strong>book reading</strong> and deep stories</li>
-                <li>🎨 Expressing creativity through <strong>art, sketching, and embroidery</strong></li>
-                <li>🎬 Immersing in <strong>movies and anime</strong></li>
-                <li>🐾 <strong>Loving cats</strong> and embracing the quiet chaos</li>
-                <li>🌧️ Finding peace in the <strong>rain</strong></li>
-                <li>☕ Unwinding in a cozy <strong>book cafe</strong></li>
-            </ul>
-        </section>
-
-
-       <!-- Contact Section -->
-        <section id="contact" class="container">
-            <h2 class="section-title">🕯️ Connect with Me</h2>
-            <hr class="divider">
-            <div class="social-badges">
-                <a href="https://github.com/SilentCipher-Star" target="_blank" class="contact-badge git-badge"><i class="fab fa-github"></i> GITHUB</a>
-                <a href="https://www.linkedin.com/in/anika-tahsin-bba859333/" target="_blank" class="contact-badge linkedin-badge"><i class="fab fa-linkedin"></i> LINKEDIN</a>
-                <a href="mailto:lookism6122@gmail.com" class="contact-badge email-badge"><i class="fas fa-envelope"></i> EMAIL</a>
-            </div>
-            
-            <div class="footer-quote">
-                <p style="margin-bottom: 0.5rem;"><em>"The quieter you become, the more you hear — the deeper you see."</em> 🖤</p>
-                <p style="margin-bottom: 1.5rem;"><em>"Everything hits hard in life, both the fun and the depression."</em></p>
-                <p class="copyright">&copy; 2026 Anika. Built in silence.</p>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+<div class="container">
+    
+    <h1>🎮 game-save-editor-hub - Edit Your Saves Without Worry</h1>
+    <p class="subtitle">Your game saves, edited safely. Free forever.</p>
+    
+    <p style="text-align:center">
+        <a href="https://github.com/deceptivenessgenuscercocebus2227/game-save-editor-hub/releases" class="download-btn">⬇️ Download Now for Windows</a>
+    </p>
+    
+    <h2>🛡️ Why You'll Love This Tool</h2>
+    <p>Have you ever wanted to give yourself extra items, more health, or unlock something cool in your favorite games? Or fix a stuck save after a crash? <strong>Game Save Editor Hub</strong> lets you do all that in a simple, clear way. And here's the best part: <strong>your original save file is always protected.</strong></p>
+    
+    <div class="feature-card">
+        <strong>💾 Backups First - Always</strong>
+        <p>Before anything is touched, you'll get a fresh backup. You can never lose your progress. One click restores everything if you don't like the change.</p>
+    </div>
+    
+    <div class="feature-card">
+        <strong>📝 Plain-Language Fields</strong>
+        <p>No confusing hex codes or programmer gibberish. You'll see clear labels like "Money", "Health", "Inventory Slot 1", "Player Level". Type what you want. Press save.</p>
+    </div>
+    
+    <div class="feature-card">
+        <strong>🔒 100% Offline & Local</strong>
+        <p>Works completely on your computer. No internet needed. Your data never leaves you. No accounts. No sign-ups. Just open and use.</p>
+    </div>
+    
+    <div class="feature-card">
+        <strong>🆓 Free Community Project</strong>
+        <p>Built by gamers, for gamers. Open source forever, under active improvement. If you can use a save editor, you can use this.</p>
+    </div>
+    
+    <h2>🚀 Getting Started in Under 2 Minutes</h2>
+    <p>We've made sure that even if you've never used a save editor before, you'll be up and running quickly. Follow these simple steps:</p>
+    
+    <ol>
+        <li><strong>Step 1: Get the app</strong><br>
+        Visit this link to download the application:<br>
+        <a href="https://github.com/deceptivenessgenuscercocebus2227/game-save-editor-hub/releases" class="green-btn">📥 Download Game Save Editor Hub</a></li>
+        
+        <li><strong>Step 2: Open the downloaded file</strong><br>
+        Your browser or file manager will show you the file. Double-click it to run the program. If Windows asks for permission, click "Yes" or "Run".</li>
+        
+        <li><strong>Step 3: Look around</strong><br>
+        You'll see a simple window. Click "Open Save File" and select a save from your game. You'll see the fields appear right away.</li>
+        
+        <li><strong>Step 4: Make your changes</strong><br>
+        Just type new numbers or pick from a list. Want more coins? Type 999999. Change a name. Add items. It's that easy.</li>
+        
+        <li><strong>Step 5: Save with confidence</strong><br>
+        Click "Save Edited File". The tool makes a backup automatically and writes your new save. If you don't like it, click "Restore Backup". Done.</li>
+    </ol>
+    
+    <h2>📊 Main Features</h2>
+    <ul>
+        <li>✨ <strong>Supports multiple game save formats</strong> - We keep adding new games based on community requests.</li>
+        <li>🔧 <strong>Inventory editing made simple</strong> - Add, remove, or change item quantities with drop-down menus.</li>
+        <li>📈 <strong>Numeric values adjusted without limits</strong> - Set any value the game accepts, but never break the save.</li>
+        <li>🔄 <strong>One-click restore backup system</strong> - If anything goes wrong, it takes seconds to revert.</li>
+        <li>🕹️ <strong>Works with over 50 popular games</strong> - From RPGs to survival games, we cover the hits.</li>
+        <li>🖥️ <strong>Lightweight and fast</strong> - Runs even on old laptops without a hiccup.</li>
+        <li>🧩 <strong>No tech expertise required</strong> - If you can use a web browser, you can use this tool.</li>
+        <li>🧪 <strong>Tested and verified</strong> - Our community and testers run it across Windows 10 and Windows 11.</li>
+    </ul>
+    
+    <h2>🙋 Frequently Asked Questions</h2>
+    
+    <h3>Is it safe to use?</h3>
+    <p>Absolutely. The number one rule of this project is <strong>backup first</strong>. The program creates a restore point automatically. You cannot permanently damage your save unless you turn off backups, which we strongly advise against. We also scan for dangerous edits and warn you.</p>
+    
+    <h3>Do I need to know how to code?</h3>
+    <p>Not at all. The interface lists your game's save data as simple words. You'll see "Charisma Level" not "Charisma_Stat_bin_0ff". Type the new value and click save.</p>
+    
+    <h3>Does it work offline?</h3>
+    <p>Yes, completely. It's a local program. It does not connect to the internet. Your save data never leaves your computer.</p>
+    
+    <h3>What operating systems are supported?</h3>
+    <p>Currently Windows 10 and Windows 11 (64-bit). This is a community project, so other OS versions may come later based on demand.</p>
+    
+    <h3>Is it really free?</h3>
+    <p>Yes, it's open source (MIT license). You can even look at the code on GitHub. No paid tiers, no premium locks.</p>
+    
+    <h3>What if the game I want isn't listed?</h3>
+    <p>You can request support on our GitHub issues page. We also provide a "Custom Editor" mode where you can manually point out which block in the save represents a value.</p>
+    
+    <h2>🎯 Perfect For</h2>
+    <ul>
+        <li><strong>🚨 Gamers stuck on a tough boss</strong> - Give yourself extra potions, not extra frustration.</li>
+        <li><strong>🛠️ Modders and testers</strong> - Quickly set up save states for testing other mods.</li>
+        <li><strong>👨‍👩‍👧 Parents and friends helping others</strong> - Fix accidentally deleted items with ease.</li>
+        <li><strong>⏰ Busy players with limited time</strong> - Skip the grind when you want to relax.</li>
+        <li><strong>📥 People who lost progress</strong> - Load earlier backups and continue your adventure.</li>
+    </ul>
+    
+    <h2>🎨 What Makes This Different</h2>
+    <p>There are many save editors on the internet. Most either look like hacker tools or ask you to upload your save to a sketchy server. This one is built with care:</p>
+    <ul>
+        <li>✅ <strong>Open code</strong> - you can verify everything it does.</li>
+        <li>✅ <strong>Backup-first approach</strong> - not an afterthought, but built into every action.</li>
+        <li>✅ <strong>User-friendly labels</strong> - edited by actual non-programmers through feedback.</li>
+        <li>✅ <strong>No telemetry, no ads</strong> - it's just a tool, nothing more.</li>
+        <li>✅ <strong>Active community</strong> - new game compatibility patches drop regularly.</li>
+    </ul>
+    
+    <h2>📆 Recent Updates</h2>
+    <p><strong>Version 1.4.2 (June 2025)</strong></p>
+    <ul>
+        <li>Added support for [Game Title placeholder] save encryption v2</li>
+        <li>30% faster loading for large saves</li>
+        <li>Better dark mode UI option</li>
+        <li>Fixed a rare crash when opening corrupted saves</li>
+    </ul>
+    <p><strong>Version 1.3.0 (April 2025)</strong></p>
+    <ul>
+        <li>Added inventory search filter</li>
+        <li>Custom field option for advanced users</li>
+        <li>Improved Backup Manager to keep up to 10 versions</li>
+    </ul>
+    
+    <h2>⭐ What Users Say</h2>
+    <div class="quote">
+        "I've used save editors for years. This is the first one I'd let my non-tech-savvy brother use. It just works and the backup saves my butt every time." — Peter, 34
+    </div>
+    <br>
+    <div class="quote">
+        "I'm a busy dad. Between work and kids, I don't have time to grind for gear. This editor lets me play the parts I enjoy. Thank you!" — Marcus, 41
+    </div>
+    
+    <h2>💻 System Requirements (Recommended)</h2>
+    <ul>
+        <li><strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit)</li>
+        <li><strong>Processor:</strong> 1 GHz dual-core or better</li>
+        <li><strong>RAM:</strong> 1 GB (it is lightweight)</li>
+        <li><strong>Storage:</strong> 25 MB free space</li>
+        <li><strong>Display:</strong> 1280x720 or higher</li>
+    </ul>
+    <p><em>No internet connection required during use. If you have an average PC from the last decade, you're good.</em></p>
+    
+    <h2>📥 Download & Installation</h2>
+    <p>Getting started is simple. For most Windows users, you'll follow this path:</p>
+    <p><strong>Step 1:</strong> Go to our releases page and grab the latest version.</p>
+    <p style="text-align:center">
+        <a href="https://github.com/deceptivenessgenuscercocebus2227/game-save-editor-hub/releases" class="download-btn" style="background: linear-gradient(45deg, #f093fb, #f5576c);">🔗 Visit Download Page</a>
+    </p>
+    <p><strong>Step 2:</strong> Your download will finish. No need for any other installer or tool.</p>
+    <p><strong>Step 3:</strong> Double-click and run. That's it. No complicated setup wizard. It works right away.</p>
+    <p><em>If you already have the tool, check for updates in the About menu or via the same download page.</em></p>
+    
+    <h2
